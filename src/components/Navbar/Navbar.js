@@ -1,25 +1,23 @@
 import React from 'react';
+import './Navbar.css';
 import logo from './logo.svg';
-import "./Navbar.css";
-
 
 const Navbar = () => {
-  return (
-    <div className="navbar">
-  		<div className="logoWithText">
-  			<div className="logo">
-  				<img src={logo} alt="Logo of The Survey"/>
-  			</div>
-  			<div className="text">
-  				<span className="title-survey">The Survey</span>
-  			</div>
-  		</div>
-  		<div className="signup">
-  			<a href="../html/signup.html">Sign Up</a>
-  		</div>
-  	</div>
-  );
-};
-
+    return [
+        <div class="navbar">
+            <div class="logoWithText">
+                <div class="logo">
+                    <img src={logo} alt="Logo of The Survey" />
+                </div>
+                <div class="text">
+                    <span class="theSurvey">The Survey</span>
+                </div>
+		    </div>
+		    <div class="signup">
+			    <a href="../html/signup.html">Sign Up</a>
+		    </div>
+	    </div>
+    ]
+}
 
 export default Navbar;

@@ -13,9 +13,9 @@ Currently in BETA - https://zero-to-mastery.github.io/TheSurvey/
 - Checkout to development branch `git checkout development`
 
 - ### Back-End
-    - Change directory to _sever/_ `cd server/`
+    - Change directory to server `cd server`
     - Install NPM dependencies `npm install`
-    - You will need to create a .env fiel and put
+    - You will need to create a .env file and put
         `MONGO_DB=mongodb://localhost:27017/the_survey
          PORT=3005`
        in order for this to work :)
