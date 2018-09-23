@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from "../components/Navbar/Navbar";
-import MySurvey from "../components/MySurvey/MySurvey";
-import Footer from "../components/Footer/Footer";
-import { surveyContents } from "../surveyContents";
-import './App.css';
+
 
 
 class App extends Component {
@@ -17,7 +13,7 @@ class App extends Component {
     surveyContents.splice(surveyIndex, 1);
     this.setState({surveyContents: surveyContents});
   }
-  
+
   render() {
     return (
       <div className="App">
