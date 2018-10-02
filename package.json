@@ -2,14 +2,17 @@
   "name": "the-survey",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://leighd2008.github.io/TheSurvey",
   "dependencies": {
+    "gh-pages": "^2.0.0",
     "ramda": "^0.25.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

@@ -10,6 +10,7 @@ class Survey extends React.Component {
   constructor(props) {
     super(props);
     this.onClickDelete = this.onClickDelete.bind(this);
+    this.onClickEdit = this.onClickEdit.bind(this);
   }
 
   onClickDelete() {
@@ -17,35 +18,42 @@ class Survey extends React.Component {
     this.props.deleteSurvey(index)
   }
 
+  onClickEdit() {
+    var index = parseInt(this.props.index, 10);
+    this.props.onRouteChange('editSurvey', index)
+  }
+
   render() {
     return (
-      <div className="survey">
-        <div className="surveyArtwork">
-          <img src={surveyIcon} alt="" />
+      <div className = "survey" >
+        <div className = "surveyArtwork" >
+          <img src = { surveyIcon } alt = "" />
         </div>
-        <div className="surveyText">
-          <div className="surveyTitle">
-            <span>{this.props.name}</span>
+        <div className = "surveyText" >
+          <div className = "surveyTitle" >
+            <span > { this.props.name } </span>
           </div>
-          <div className="surveyDescription">
-            <span>{this.props.desc}</span>
+          <div className = "surveyDescription" >
+            <span > { this.props.desc } </span>
           </div>
         </div>
-        <div className="surveyFunctions">
-          <img src={editIcon} alt="edit" title="Edit" className="svgIcon" />
-          <img
-            src={deleteIcon}
-            alt="delete"
-            title="Delete"
-            className="svgIcon"
-            onClick={this.onClickDelete}
+        <div className = "surveyFunctions" >
+          <img src = { editIcon }
+            alt = "edit"
+            title = "Edit"
+            className = "svgIcon"
+            onClick = { this.onClickEdit }
+          />
+          <img src = { deleteIcon }
+            alt = "delete"
+            title = "Delete"
+            className = "svgIcon"
+            onClick = { this.onClickDelete }
           />
         </div>
       </div>
     );
   }
-
-
 };
 
 export default Survey;
